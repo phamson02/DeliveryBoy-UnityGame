@@ -442,10 +442,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceThreshold: 0.1
-  waypoints: {fileID: 6322397081524711576, guid: 301b664bafa5b2944b69376ec4daaf68, type: 3}
+  waypoints: {fileID: 7206569910301773857, guid: 5e80da99c85617b4e81ac9218aa09e3e, type: 3}
   moveSpeed: 5
   rotateSpeed: 4
-  carprefabs: []
   currentWaypoint: {fileID: 0}
 --- !u!1 &9150221362361964182
 GameObject:
