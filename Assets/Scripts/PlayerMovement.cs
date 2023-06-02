@@ -6,8 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
     private float moveSpeed = 10f;
-    private Vector3 rotateDirection = new Vector3(0, 0, 0);
     // Start is called before the first frame update
+    private float movementX, movementY;
     void Start()
     {
         
@@ -16,10 +16,9 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
+        movementX = Input.GetAxisRaw("Horizontal");
+        movementY = Input.GetAxisRaw("Vertical");
 
-        Vector3 moveDirection = new Vector3(horizontalInput, 0f, verticalInput).normalized;
-        transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
+        transform.position += new Vector3(movementX, movementY, 0f) * Time.deltaTime * moveSpeed;
     }
 }
