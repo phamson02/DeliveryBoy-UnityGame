@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Buildings
+  - Vehicles
   layers:
   - Default
   - TransparentFX
@@ -47,6 +49,12 @@ TagManager:
   - name: Buildings
     uniqueID: 456909593
     locked: 0
+  - name: Vehicles
+    uniqueID: 1759028709
+    locked: 0
+  - name: Barriers
+    uniqueID: 2826253715
+    locked: 0
   - name: Player
-    uniqueID: 3711167421
+    uniqueID: 1526844421
     locked: 0
