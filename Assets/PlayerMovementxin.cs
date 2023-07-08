@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovementxin : MonoBehaviour
 {
 	public float moveSpeed = 5f; 
-
+	public FixedJoystick Joystick;
 	public Rigidbody2D rb; 
 
 	public Animator animator;
@@ -13,8 +13,10 @@ public class PlayerMovementxin : MonoBehaviour
 	
 	void Update() 
 	{
-		movement.x = Input.GetAxisRaw("Horizontal");
-		movement.y = Input.GetAxisRaw("Vertical");
+		// movement.x = Input.GetAxisRaw("Horizontal");
+		// movement.y = Input.GetAxisRaw("Vertical");
+		movement.x = Joystick.Horizontal;
+		movement.y = Joystick.Vertical;
 		animator.SetFloat("Horizontal", movement.x); 
 		animator.SetFloat("Vertical", movement.y);
 		animator.SetFloat("Speed", movement.sqrMagnitude);
