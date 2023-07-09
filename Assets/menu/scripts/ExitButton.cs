@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ExitButton : MonoBehaviour
-{
+{   
+    public GameObject exitPanel;
     // Start is called before the first frame update
-    public void QuitGame()
+    public void QuitGameBtn()
     {
-        Application.Quit();
+        exitPanel.SetActive(true);
     }
     // Update is called once per frame
 }
