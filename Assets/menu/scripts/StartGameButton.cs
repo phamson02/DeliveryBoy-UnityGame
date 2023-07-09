@@ -6,10 +6,13 @@ using UnityEngine.SceneManagement;
 public class StartGameButton : MonoBehaviour
 {
     // Start is called before the first frame update
-    public int gameStartScene;
+    //public int gameStartScene;
+    public GameObject levelMenu;
+    
     public void StartGame()
     {
-        SceneManager.LoadScene(gameStartScene);
+        //SceneManager.LoadScene(gameStartScene);
+        levelMenu.SetActive(true);
     }
 
     // Update is called once per frame
