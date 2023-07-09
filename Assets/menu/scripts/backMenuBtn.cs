@@ -9,4 +9,9 @@ public class backMenuBtn : MonoBehaviour
     {
         currentPanel.SetActive(false);
     }
+
+    public void exit()
+    {
+        Application.Quit();
+    }
 }
