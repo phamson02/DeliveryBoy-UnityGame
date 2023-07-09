@@ -860,6 +860,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: BD001_30
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 1027
+        width: 319
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cb37f7b69da6954f9ddca1fcd4f1bcd
+      internalID: 262677468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -895,6 +916,7 @@ TextureImporter:
       BD001_28: 6201400937563009380
       BD001_29: -3415130577688685245
       BD001_3: 6492572921377855227
+      BD001_30: 262677468
       BD001_4: -5275536168714941238
       BD001_5: 8709197593225785583
       BD001_6: -2615313993320748687
