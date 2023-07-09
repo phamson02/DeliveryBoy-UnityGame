@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Buildings
   - Vehicles
+  - House
+  - Shop
   layers:
   - Default
   - TransparentFX
