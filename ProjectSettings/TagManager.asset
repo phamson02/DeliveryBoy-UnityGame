@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Buildings
+  - Vehicles
+  - House
+  - Shop
   layers:
   - Default
   - TransparentFX
@@ -40,4 +44,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 2589392049
+    locked: 0
+  - name: Buildings
+    uniqueID: 456909593
+    locked: 0
+  - name: Vehicles
+    uniqueID: 1759028709
+    locked: 0
+  - name: Barriers
+    uniqueID: 2826253715
+    locked: 0
+  - name: Player
+    uniqueID: 1526844421
     locked: 0
