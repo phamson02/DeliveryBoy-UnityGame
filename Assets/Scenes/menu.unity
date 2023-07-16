@@ -1787,6 +1787,61 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentPanel: {fileID: 193024179}
+--- !u!1 &812394936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 812394938}
+  - component: {fileID: 812394937}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &812394937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812394936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20790e82fced56c479e110fe9de08866, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: 4c76a331a37035c438420cd38e85be7e, type: 2}
+  musicOn: {fileID: 2004034212}
+  musicOff: {fileID: 2027640880}
+  slider: {fileID: 1229249404}
+  data:
+    healths: 1
+    speed: 5
+    levelUnlocked: 1
+    stars: 0000000000000000000000000000000000000000000000000000000000000000
+    audios: 1
+    volume: 0
+--- !u!4 &812394938
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812394936}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 464.0592, y: 214.4054, z: 5.4943676}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &882996189
 GameObject:
   m_ObjectHideFlags: 0
@@ -3135,10 +3190,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 2030503910}
   m_HandleRect: {fileID: 356457669}
   m_Direction: 0
-  m_MinValue: -80
+  m_MinValue: -40
   m_MaxValue: 0
   m_WholeNumbers: 0
-  m_Value: -15
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -3169,6 +3224,14 @@ MonoBehaviour:
   mixer: {fileID: 24100000, guid: 4c76a331a37035c438420cd38e85be7e, type: 2}
   musicOn: {fileID: 2004034212}
   musicOff: {fileID: 2027640880}
+  slider: {fileID: 1229249404}
+  data:
+    healths: 1
+    speed: 5
+    levelUnlocked: 1
+    stars: 0000000000000000000000000000000000000000000000000000000000000000
+    audios: 1
+    volume: -20
 --- !u!1 &1236816710
 GameObject:
   m_ObjectHideFlags: 0
