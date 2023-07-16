@@ -439,6 +439,8 @@ MonoBehaviour:
   - {fileID: 1328068984286266660, guid: ffc89086a236d134086f2b1a110da5c1, type: 3}
   - {fileID: 8336233039082254831, guid: 697b13292f740e44fae64ed504354663, type: 3}
   pos: {fileID: 24252134}
+  carsPerSpawn: 3
+  carSpeed: 5
 --- !u!1 &39206178
 GameObject:
   m_ObjectHideFlags: 0
@@ -1984,6 +1986,8 @@ MonoBehaviour:
   - {fileID: 1328068984286266660, guid: ffc89086a236d134086f2b1a110da5c1, type: 3}
   - {fileID: 8336233039082254831, guid: 697b13292f740e44fae64ed504354663, type: 3}
   pos: {fileID: 133953233}
+  carsPerSpawn: 3
+  carSpeed: 5
 --- !u!1 &136444473
 GameObject:
   m_ObjectHideFlags: 0
@@ -57165,6 +57169,8 @@ MonoBehaviour:
   - {fileID: 6131669069940612189, guid: 7375d71f3607eb94a9b8dfff38c7f5c5, type: 3}
   - {fileID: 8481503882185297103, guid: 5af867ac12f95f54eb75f6387f035d4b, type: 3}
   pos: {fileID: 369773760}
+  carsPerSpawn: 3
+  carSpeed: 5
 --- !u!1 &385966326
 GameObject:
   m_ObjectHideFlags: 0
@@ -57630,7 +57636,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000015258789}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -133.56445, y: -70.80188}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &429889934
@@ -57720,6 +57726,8 @@ MonoBehaviour:
   - {fileID: 6131669069940612189, guid: 7375d71f3607eb94a9b8dfff38c7f5c5, type: 3}
   - {fileID: 8481503882185297103, guid: 5af867ac12f95f54eb75f6387f035d4b, type: 3}
   pos: {fileID: 430797163}
+  carsPerSpawn: 3
+  carSpeed: 5
 --- !u!1 &456355828
 GameObject:
   m_ObjectHideFlags: 0
@@ -62903,7 +62911,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000015258789}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 66.43555, y: 29.19812}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &877730096
@@ -64123,6 +64131,7 @@ GameObject:
   - component: {fileID: 983958273}
   - component: {fileID: 983958272}
   - component: {fileID: 983958275}
+  - component: {fileID: 983958276}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -64212,6 +64221,18 @@ MonoBehaviour:
   maxX: 0
   minY: 0
   maxY: 0
+--- !u!114 &983958276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983958271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 797ecf5a12b454e06aa1dd5a579a5142, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &990020647
 GameObject:
   m_ObjectHideFlags: 0
@@ -71513,6 +71534,8 @@ MonoBehaviour:
   - {fileID: 1328068984286266660, guid: ffc89086a236d134086f2b1a110da5c1, type: 3}
   - {fileID: 8336233039082254831, guid: 697b13292f740e44fae64ed504354663, type: 3}
   pos: {fileID: 1499936110}
+  carsPerSpawn: 3
+  carSpeed: 5
 --- !u!1 &1509653622
 GameObject:
   m_ObjectHideFlags: 0
@@ -72866,7 +72889,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1643341873}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 983958276}
+        m_TargetAssemblyTypeName: Restart, Assembly-CSharp
+        m_MethodName: ResetTheGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1643341873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73508,6 +73543,8 @@ MonoBehaviour:
   - {fileID: 8481503882185297103, guid: 5af867ac12f95f54eb75f6387f035d4b, type: 3}
   - {fileID: 4455585526964824273, guid: 8634b7c85648124498e05991cda5dc41, type: 3}
   pos: {fileID: 1700770562}
+  carsPerSpawn: 3
+  carSpeed: 5
 --- !u!1 &1707487491
 GameObject:
   m_ObjectHideFlags: 0
