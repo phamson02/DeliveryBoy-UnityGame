@@ -9,6 +9,7 @@ public class CountdownTimer : MonoBehaviour
     public GameObject textDisplay;
     public int secondsLeft = 0;
     public bool takingAway = false;
+    public bool counting = false;
     public int minutesLeft = 4;
 
     private TextMeshProUGUI textMeshPro;
@@ -21,13 +22,18 @@ public class CountdownTimer : MonoBehaviour
 
     void Update()
     {
-        if (takingAway == false && secondsLeft > 0 && minutesLeft > 0)
-        {
-            StartCoroutine(TimerTake());
-        }
-        else if (takingAway == false && secondsLeft == 0 && minutesLeft > 0) {
-            StartCoroutine(TimerTake());
-        }
+        if (counting){
+            if (takingAway == false && secondsLeft > 0 && minutesLeft > 0)
+            {
+                StartCoroutine(TimerTake());
+            }
+            else if (takingAway == false && secondsLeft == 0 && minutesLeft > 0) {
+                StartCoroutine(TimerTake());
+            }
+            else if (takingAway == false && secondsLeft > 0 && minutesLeft == 0){
+                StartCoroutine(TimerTake());
+            }
+        }  
     }
 
     IEnumerator TimerTake()

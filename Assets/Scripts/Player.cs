@@ -16,11 +16,12 @@ public class Player: MonoBehaviour
 	public int currentLives;
 	public HealthBar healthBar;
 	public SpriteRenderer sprite;
-	private int flickerAmount=5;
+	private int flickerAmount=6;
 	private float flickerDuration=0.1f;
 
 	[SerializeField]
 	private Button receiveButton, deliverButton;
+	public bool carryingOrder = false;
 
 	public Animator animator;
 	Vector2 movement; 
@@ -63,8 +64,8 @@ public class Player: MonoBehaviour
 				receiveButton.gameObject.SetActive(true);
 			}
 		}
-		else if (collision.gameObject.CompareTag("House")){
-			if (collision.gameObject.GetComponent<House>().isDesination){
+		else if (collision.gameObject.CompareTag("House") && carryingOrder){
+			if (collision.gameObject.GetComponent<House>().isDesination && carryingOrder){
 				deliverButton.gameObject.SetActive(true);
 			}
 		}

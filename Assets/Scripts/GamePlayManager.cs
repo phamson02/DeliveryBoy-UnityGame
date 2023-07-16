@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class GamePlayManager : MonoBehaviour
 {
     private GameObject[] buildings;
+    [SerializeField]
+    private Player player;
 
     [SerializeField]
     private GameObject pointer;
@@ -42,22 +44,6 @@ public class GamePlayManager : MonoBehaviour
         }
         updatePointer(shop);
         changeTarget(shop);
-
-        // while (true){
-        //     if (! inProcess){
-        //         inProcess = true;
-        //         shop.GetComponent<Shop>().havingOrder = true;
-
-        //         destinationIndex = Random.Range(0, buildings.Length);
-        //         while (destinationIndex == shopIndex){
-        //             destinationIndex = Random.Range(0, buildings.Length);
-        //         }
-
-        //         destination = buildings[destinationIndex];
-        //         destination.GetComponent<House>().isDesination = true;
-
-        //     }
-        // }
         
         StartCoroutine(GenerateOrder());
 
@@ -75,6 +61,7 @@ public class GamePlayManager : MonoBehaviour
 
     public void receiveButtonClick(){
         carryingOrder = true;
+        player.GetComponent<Player>().carryingOrder = true;
         recieveButton.gameObject.SetActive(false);
         shop.GetComponent<Shop>().havingOrder = false;
         updatePointer(destination);
@@ -86,6 +73,7 @@ public class GamePlayManager : MonoBehaviour
             destination.GetComponent<House>().isDesination = false;
             deliverButton.gameObject.SetActive(false);  
             carryingOrder = false;
+            player.GetComponent<Player>().carryingOrder = false;
             inProcess = false;
             updatePointer(shop);
             changeTarget(shop);

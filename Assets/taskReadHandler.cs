@@ -9,6 +9,7 @@ public class taskReadHandler : MonoBehaviour
     public GameObject pauseBtn;
     public GameObject joystick;
     public HealthBar healthBar;
+    public CountdownTimer timer;
     // Start is called before the first frame update
     public void taskRead()
     {
@@ -17,5 +18,7 @@ public class taskReadHandler : MonoBehaviour
         joystick.SetActive(true);
 
         healthBar.gameObject.SetActive(true);
+        timer.textDisplay.SetActive(true);
+        timer.counting = true;
     }
 }

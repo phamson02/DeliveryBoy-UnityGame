@@ -10,6 +10,7 @@ public class ContBtnHandler : MonoBehaviour
     public GameObject joystick;
     public GameObject taskList;
     public HealthBar healthBar;
+    public CountdownTimer timer;
     public void Continue()
     {
         pauseMenu.SetActive(false);
@@ -17,5 +18,6 @@ public class ContBtnHandler : MonoBehaviour
         pauseBtn.SetActive(true);
         joystick.SetActive(true);
         healthBar.gameObject.SetActive(true);
+        timer.counting = true;
     }
 }
