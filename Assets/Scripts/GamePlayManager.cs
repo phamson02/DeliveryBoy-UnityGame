@@ -9,6 +9,8 @@ public class GamePlayManager : MonoBehaviour
     [SerializeField]
     private Player player;
 
+
+    // For target pointer
     [SerializeField]
     private GameObject pointer;
     private Vector3 pointerPosition;
@@ -16,6 +18,7 @@ public class GamePlayManager : MonoBehaviour
     [SerializeField]
     private TargetIndicator questPointer;
 
+    // For delivery feature
     [SerializeField]
     private Button recieveButton, deliverButton;
 
@@ -23,9 +26,49 @@ public class GamePlayManager : MonoBehaviour
     private int destinationIndex, shopIndex;
     private bool inProcess=false, carryingOrder=false;
 
+    // For level settings
+    private int level;
+    public VehicleSpawner[] vehicleSpawners;
+    public CountdownTimer timer;
+
+
     // Start is called before the first frame update
     void Start()
     {
+        level = PlayerPrefs.GetInt("SelectedLevel");
+
+        // Settings for the level
+
+        foreach (VehicleSpawner vehicleSpawner in vehicleSpawners){
+                vehicleSpawner.carSpeed = 3 + level;
+                vehicleSpawner.carsPerSpawn = (level - 1) / 2 + 1;
+            }
+        
+        if (level == 1){
+            
+        }
+        else if (level == 2){
+
+        }
+        else if (level == 3){
+            
+        }
+        else if (level == 4){
+            
+        }
+        else if (level == 5){
+            
+        }
+        else if (level == 6){
+            
+        }
+        else if (level == 7){
+            
+        }
+        else if (level == 8){
+            
+        }
+
         recieveButton.gameObject.SetActive(false);
         deliverButton.gameObject.SetActive(false);
 
