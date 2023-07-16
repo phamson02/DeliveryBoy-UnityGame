@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GamePlayManager : MonoBehaviour
 {
@@ -33,10 +34,12 @@ public class GamePlayManager : MonoBehaviour
     private int numTotalOrders;
     private bool useTime;
 
-    // For calculating score
+    // For calculating score when game over
     private int numDeliveredOrders=0;
     private float remainingTime;
-    private float totalMinutes, totalSeconds;
+    private int totalMinutes, totalSeconds;
+    public GameObject deathScreen, gameCompletedSceen, scoreDisplay, taskOrdersDisplay, taskTimeDisplay;
+    private TextMeshProUGUI tmp, tmp1, tmp2;
 
     // Start is called before the first frame update
     void Start()
@@ -46,7 +49,7 @@ public class GamePlayManager : MonoBehaviour
 
         // Settings for the level
 
-        if (level <= 5){
+        if (level <= 4){
             useTime = true;
         }
         else{
@@ -64,38 +67,49 @@ public class GamePlayManager : MonoBehaviour
             totalSeconds = 0;
         }
         else if (level == 2){
-            numTotalOrders = 1;
+            numTotalOrders = 2;
             totalMinutes = 1;
-            totalSeconds = 0;
+            totalSeconds = 15;
         }
         else if (level == 3){
-            numTotalOrders = 1;
+            numTotalOrders = 3;
             totalMinutes = 1;
-            totalSeconds = 0;
+            totalSeconds = 30;
         }
         else if (level == 4){
-            numTotalOrders = 1;
+            numTotalOrders = 4;
             totalMinutes = 1;
-            totalSeconds = 0;
+            totalSeconds = 45;
         }
         else if (level == 5){
-            totalMinutes = 1;
-            totalSeconds = 0;
+            numTotalOrders = 4;
+            totalMinutes = 2;
+            totalSeconds = 30;
         }
         else if (level == 6){
-            totalMinutes = 1;
-            totalSeconds = 0;
+            numTotalOrders = 5;
+            totalMinutes = 2;
+            totalSeconds = 45;
         }
         else if (level == 7){
-            totalMinutes = 1;
-            totalSeconds = 0;
+            numTotalOrders = 6;
+            totalMinutes = 3;
+            totalSeconds = 15;
         }
         else if (level == 8){
-            totalMinutes = 1;
-            totalSeconds = 0;
+            numTotalOrders = 7;
+            totalMinutes = 3;
+            totalSeconds = 45;
         }
 
-        Debug.Log("Level " + level + " numTotalOrders = " + numTotalOrders);
+        tmp1 = taskOrdersDisplay.GetComponent<TextMeshProUGUI>();
+        tmp1.text = "deliver " + numTotalOrders + " item(s)";
+
+        tmp2 = taskTimeDisplay.GetComponent<TextMeshProUGUI>();
+        tmp2.text = "finish within " + totalMinutes.ToString("00") + ":" + totalSeconds.ToString("00");
+
+        timer.minutesLeft = totalMinutes;
+        timer.secondsLeft = totalSeconds;
 
         recieveButton.gameObject.SetActive(false);
         deliverButton.gameObject.SetActive(false);
@@ -152,9 +166,10 @@ public class GamePlayManager : MonoBehaviour
             numDeliveredOrders += 1;
             Debug.Log("numDeliverOrders updated to " + numDeliveredOrders);
             Debug.Log("useTime is " + useTime);
-            Debug.Log("check condition :" + (numDeliveredOrders == numTotalOrders));
+            Debug.Log("check condition: " + numDeliveredOrders + " " + numTotalOrders);
+            Debug.Log("check condition: " + (numDeliveredOrders == numTotalOrders));
             if (useTime && (numDeliveredOrders == numTotalOrders)){
-                gameOver();
+                gameCompleted();
             }
         }       
     }
@@ -179,9 +194,23 @@ public class GamePlayManager : MonoBehaviour
         } 
     }
 
+    public void endGame(){
+        if (calculateScore() == 0){
+            gameOver();
+        }
+        else{
+            gameCompleted();
+        }
+    }
     public void gameOver(){
-        Debug.Log("The game is all over motherfucker");
-        Debug.Log("Your final stars is: " + calculateScore());
+        deathScreen.SetActive(true);
+    }
+
+    public void gameCompleted(){
+        tmp = scoreDisplay.GetComponent<TextMeshProUGUI>();
+        tmp.text = "YOU EARNED " + calculateScore().ToString();
+
+        gameCompletedSceen.SetActive(true);
     }
 
     public int calculateScore(){
@@ -211,8 +240,8 @@ public class GamePlayManager : MonoBehaviour
             }
             else{
                 // The game ends when time is up, you get 1 star if the player delivered the minimum number of orders, plus 1 star 
-                // for each additional 3 orders
-                return 1 + (int)Mathf.Min(2, numDeliveredOrders/3); 
+                // for each additional 2 orders
+                return 1 + (int)Mathf.Min(2, numDeliveredOrders/2); 
             }
         }
     }
