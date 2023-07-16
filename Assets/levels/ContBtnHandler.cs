@@ -9,11 +9,13 @@ public class ContBtnHandler : MonoBehaviour
 
     public GameObject joystick;
     public GameObject taskList;
+    public HealthBar healthBar;
     public void Continue()
     {
         pauseMenu.SetActive(false);
         taskList.SetActive(true);
         pauseBtn.SetActive(true);
         joystick.SetActive(true);
+        healthBar.gameObject.SetActive(true);
     }
 }

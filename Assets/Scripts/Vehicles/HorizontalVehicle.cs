@@ -25,7 +25,7 @@ public class HorizontalVehicle : MonoBehaviour
         if (direction == "left"){
             frontPosition.x += 2;
             for (int i=2; i<4; i++){
-                frontPosition.x += 0.5f;
+                frontPosition.x += 1f;
                 if (isObjectHere(frontPosition)){
                     myBody.velocity = new Vector2(0, myBody.velocity.y);
                 }
@@ -34,7 +34,7 @@ public class HorizontalVehicle : MonoBehaviour
         else if (direction == "right"){
             frontPosition.x -= 2;
             for (int i=2; i<4; i++){
-                frontPosition.x -= 0.5f;
+                frontPosition.x -= 1f;
                 if (isObjectHere(frontPosition)){
                     myBody.velocity = new Vector2(0, myBody.velocity.y);
                 }
