@@ -53106,12 +53106,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2081f729c50ae0b4e96efe9f44a9f661, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carsPerSpawn: 3
+  carSpeed: 5
   vehiclesReference:
   - {fileID: 9111462112542954750, guid: a2d0813957f1c66478b865771c072676, type: 3}
   - {fileID: 5138348787400695884, guid: fffb995877ec9de45bf56371fa9cd73a, type: 3}
   pos: {fileID: 160302076}
-  carsPerSpawn: 3
-  carSpeed: 5
 --- !u!1 &175800411
 GameObject:
   m_ObjectHideFlags: 0
@@ -57470,14 +57470,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2081f729c50ae0b4e96efe9f44a9f661, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carsPerSpawn: 3
+  carSpeed: 5
   vehiclesReference:
   - {fileID: 5138348787400695884, guid: fffb995877ec9de45bf56371fa9cd73a, type: 3}
   - {fileID: 9111462112542954750, guid: a2d0813957f1c66478b865771c072676, type: 3}
   - {fileID: 1328068984286266660, guid: ffc89086a236d134086f2b1a110da5c1, type: 3}
   - {fileID: 8336233039082254831, guid: 697b13292f740e44fae64ed504354663, type: 3}
   pos: {fileID: 522732479}
-  carsPerSpawn: 3
-  carSpeed: 5
 --- !u!1 &552153329
 GameObject:
   m_ObjectHideFlags: 0
@@ -60956,13 +60956,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f40de1d72ca024468546ca087f28fef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carsPerSpawn: 3
+  carSpeed: 5
   vehiclesReference:
   - {fileID: 4455585526964824273, guid: 8634b7c85648124498e05991cda5dc41, type: 3}
   - {fileID: 8481503882185297103, guid: 5af867ac12f95f54eb75f6387f035d4b, type: 3}
   - {fileID: 6131669069940612189, guid: 7375d71f3607eb94a9b8dfff38c7f5c5, type: 3}
   pos: {fileID: 874326197}
-  carsPerSpawn: 3
-  carSpeed: 5
 --- !u!1 &876389420
 GameObject:
   m_ObjectHideFlags: 0
@@ -61140,13 +61140,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f356136d1e1f1294086d9041a261bf82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carsPerSpawn: 3
+  carSpeed: 5
   vehiclesReference:
   - {fileID: 4455585526964824273, guid: 8634b7c85648124498e05991cda5dc41, type: 3}
   - {fileID: 6131669069940612189, guid: 7375d71f3607eb94a9b8dfff38c7f5c5, type: 3}
   - {fileID: 8481503882185297103, guid: 5af867ac12f95f54eb75f6387f035d4b, type: 3}
   pos: {fileID: 876623639}
-  carsPerSpawn: 3
-  carSpeed: 5
 --- !u!1 &938202830
 GameObject:
   m_ObjectHideFlags: 0
@@ -71081,14 +71081,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ddbb8e9a51868e418593ec99746b89c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carsPerSpawn: 3
+  carSpeed: 5
   vehiclesReference:
   - {fileID: 5138348787400695884, guid: fffb995877ec9de45bf56371fa9cd73a, type: 3}
   - {fileID: 9111462112542954750, guid: a2d0813957f1c66478b865771c072676, type: 3}
   - {fileID: 1328068984286266660, guid: ffc89086a236d134086f2b1a110da5c1, type: 3}
   - {fileID: 8336233039082254831, guid: 697b13292f740e44fae64ed504354663, type: 3}
   pos: {fileID: 1839787489}
-  carsPerSpawn: 3
-  carSpeed: 5
 --- !u!1 &1845444065
 GameObject:
   m_ObjectHideFlags: 0
@@ -71538,6 +71538,8 @@ MonoBehaviour:
   questPointer: {fileID: 1323362252}
   recieveButton: {fileID: 1619678208}
   deliverButton: {fileID: 375381507}
+  vehicleSpawners: []
+  timer: {fileID: 2130694547}
 --- !u!114 &1856933013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74976,14 +74978,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ddbb8e9a51868e418593ec99746b89c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carsPerSpawn: 3
+  carSpeed: 5
   vehiclesReference:
   - {fileID: 5138348787400695884, guid: fffb995877ec9de45bf56371fa9cd73a, type: 3}
   - {fileID: 9111462112542954750, guid: a2d0813957f1c66478b865771c072676, type: 3}
   - {fileID: 1328068984286266660, guid: ffc89086a236d134086f2b1a110da5c1, type: 3}
   - {fileID: 8336233039082254831, guid: 697b13292f740e44fae64ed504354663, type: 3}
   pos: {fileID: 1933470822}
-  carsPerSpawn: 3
-  carSpeed: 5
 --- !u!1 &1939227161
 GameObject:
   m_ObjectHideFlags: 0

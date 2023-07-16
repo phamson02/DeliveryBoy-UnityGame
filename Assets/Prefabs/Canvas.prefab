@@ -1590,6 +1590,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feeb096350e8eda4db4dc1c3e056a592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data:
+    healths: 1
+    speed: 5
+    levelUnlocked: 1
+    stars: 0000000000000000000000000000000000000000000000000000000000000000
+    audios: 1
+    volume: 0
 --- !u!1 &1094309005738843232
 GameObject:
   m_ObjectHideFlags: 0
@@ -3348,6 +3355,14 @@ MonoBehaviour:
   mixer: {fileID: 24100000, guid: 4c76a331a37035c438420cd38e85be7e, type: 2}
   musicOn: {fileID: 1094309006798472264}
   musicOff: {fileID: 1094309005150590989}
+  slider: {fileID: 0}
+  data:
+    healths: 1
+    speed: 5
+    levelUnlocked: 1
+    stars: 0000000000000000000000000000000000000000000000000000000000000000
+    audios: 1
+    volume: 0
 --- !u!1 &1094309006728214782
 GameObject:
   m_ObjectHideFlags: 0

@@ -33,6 +33,10 @@ public class CountdownTimer : MonoBehaviour
             else if (takingAway == false && secondsLeft > 0 && minutesLeft == 0){
                 StartCoroutine(TimerTake());
             }
+            else if (takingAway == false && secondsLeft == 0 && minutesLeft == 0){
+                counting = false;
+                FindObjectOfType<GamePlayManager>().gameOver();
+            }
         }  
     }
 
