@@ -52,8 +52,9 @@ public class Player: MonoBehaviour
 			transform.position = initialPosition;
 			StartCoroutine(GetHitFlicker());
 
-			if (currentLives == 0){
+			if (currentLives <= 0){
 				// TODO Switch to game over screen, end the game
+				FindObjectOfType<GamePlayManager>().gameOver();
 			}
         }
     }

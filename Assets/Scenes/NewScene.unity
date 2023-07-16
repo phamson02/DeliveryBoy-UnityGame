@@ -278,14 +278,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ddbb8e9a51868e418593ec99746b89c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carsPerSpawn: 3
+  carSpeed: 5
   vehiclesReference:
   - {fileID: 5138348787400695884, guid: fffb995877ec9de45bf56371fa9cd73a, type: 3}
   - {fileID: 9111462112542954750, guid: a2d0813957f1c66478b865771c072676, type: 3}
   - {fileID: 1328068984286266660, guid: ffc89086a236d134086f2b1a110da5c1, type: 3}
   - {fileID: 8336233039082254831, guid: 697b13292f740e44fae64ed504354663, type: 3}
   pos: {fileID: 24252134}
-  carsPerSpawn: 3
-  carSpeed: 5
 --- !u!1 &45473062
 GameObject:
   m_ObjectHideFlags: 0
@@ -858,14 +858,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ddbb8e9a51868e418593ec99746b89c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carsPerSpawn: 3
+  carSpeed: 5
   vehiclesReference:
   - {fileID: 5138348787400695884, guid: fffb995877ec9de45bf56371fa9cd73a, type: 3}
   - {fileID: 9111462112542954750, guid: a2d0813957f1c66478b865771c072676, type: 3}
   - {fileID: 1328068984286266660, guid: ffc89086a236d134086f2b1a110da5c1, type: 3}
   - {fileID: 8336233039082254831, guid: 697b13292f740e44fae64ed504354663, type: 3}
   pos: {fileID: 133953233}
-  carsPerSpawn: 3
-  carSpeed: 5
 --- !u!1 &156042901
 GameObject:
   m_ObjectHideFlags: 0
@@ -1094,7 +1094,7 @@ Transform:
   - {fileID: 260885615}
   - {fileID: 1312126506}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &220333198 stripped
 GameObject:
@@ -1726,7 +1726,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &357280545
 MonoBehaviour:
@@ -1745,6 +1745,14 @@ MonoBehaviour:
   questPointer: {fileID: 84128601}
   recieveButton: {fileID: 2044577230}
   deliverButton: {fileID: 696644118}
+  vehicleSpawners:
+  - {fileID: 1499936111}
+  - {fileID: 24252135}
+  - {fileID: 430797164}
+  - {fileID: 369773761}
+  - {fileID: 133953234}
+  - {fileID: 1700770563}
+  timer: {fileID: 1251607580}
 --- !u!1 &369082261
 GameObject:
   m_ObjectHideFlags: 0
@@ -1811,7 +1819,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &369773759
 GameObject:
@@ -1857,13 +1865,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f40de1d72ca024468546ca087f28fef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carsPerSpawn: 3
+  carSpeed: 5
   vehiclesReference:
   - {fileID: 4455585526964824273, guid: 8634b7c85648124498e05991cda5dc41, type: 3}
   - {fileID: 6131669069940612189, guid: 7375d71f3607eb94a9b8dfff38c7f5c5, type: 3}
   - {fileID: 8481503882185297103, guid: 5af867ac12f95f54eb75f6387f035d4b, type: 3}
   pos: {fileID: 369773760}
-  carsPerSpawn: 3
-  carSpeed: 5
 --- !u!1 &403193402
 GameObject:
   m_ObjectHideFlags: 0
@@ -2101,13 +2109,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f356136d1e1f1294086d9041a261bf82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carsPerSpawn: 3
+  carSpeed: 5
   vehiclesReference:
   - {fileID: 4455585526964824273, guid: 8634b7c85648124498e05991cda5dc41, type: 3}
   - {fileID: 6131669069940612189, guid: 7375d71f3607eb94a9b8dfff38c7f5c5, type: 3}
   - {fileID: 8481503882185297103, guid: 5af867ac12f95f54eb75f6387f035d4b, type: 3}
   pos: {fileID: 430797163}
-  carsPerSpawn: 3
-  carSpeed: 5
 --- !u!1001 &438439258
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9489,6 +9497,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1969216020}
     - target: {fileID: 7490552412330468510, guid: 24b9505bc1225be4abebddf677662564, type: 3}
+      propertyPath: moveSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7490552412330468510, guid: 24b9505bc1225be4abebddf677662564, type: 3}
       propertyPath: deliverButton
       value: 
       objectReference: {fileID: 696644118}
@@ -10169,14 +10181,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2081f729c50ae0b4e96efe9f44a9f661, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carsPerSpawn: 3
+  carSpeed: 5
   vehiclesReference:
   - {fileID: 5138348787400695884, guid: fffb995877ec9de45bf56371fa9cd73a, type: 3}
   - {fileID: 9111462112542954750, guid: a2d0813957f1c66478b865771c072676, type: 3}
   - {fileID: 1328068984286266660, guid: ffc89086a236d134086f2b1a110da5c1, type: 3}
   - {fileID: 8336233039082254831, guid: 697b13292f740e44fae64ed504354663, type: 3}
   pos: {fileID: 1499936110}
-  carsPerSpawn: 3
-  carSpeed: 5
 --- !u!1001 &1500358387
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10982,13 +10994,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f356136d1e1f1294086d9041a261bf82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carsPerSpawn: 3
+  carSpeed: 5
   vehiclesReference:
   - {fileID: 6131669069940612189, guid: 7375d71f3607eb94a9b8dfff38c7f5c5, type: 3}
   - {fileID: 8481503882185297103, guid: 5af867ac12f95f54eb75f6387f035d4b, type: 3}
   - {fileID: 4455585526964824273, guid: 8634b7c85648124498e05991cda5dc41, type: 3}
   pos: {fileID: 1700770562}
-  carsPerSpawn: 3
-  carSpeed: 5
 --- !u!1 &1723255092
 GameObject:
   m_ObjectHideFlags: 0
@@ -54251,7 +54263,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1094309005217669970, guid: 060c6e8de6007534f9c0d47e917e85e9, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1094309005217669970, guid: 060c6e8de6007534f9c0d47e917e85e9, type: 3}
       propertyPath: m_AnchorMax.x
@@ -54342,6 +54354,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1251607580}
     - target: {fileID: 1094309006361927192, guid: 060c6e8de6007534f9c0d47e917e85e9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1277603304876198772, guid: 060c6e8de6007534f9c0d47e917e85e9, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -54839,7 +54855,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1451808766681453539, guid: 9320f4a39dba57141b205ab42cbf93ff, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1451808766681453539, guid: 9320f4a39dba57141b205ab42cbf93ff, type: 3}
       propertyPath: m_LocalPosition.x
@@ -54904,7 +54920,7 @@ PrefabInstance:
       objectReference: {fileID: 1523683033}
     - target: {fileID: 7492386332956600823, guid: d12abf24daccc3a488a4f752bc79a245, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7492386332956600823, guid: d12abf24daccc3a488a4f752bc79a245, type: 3}
       propertyPath: m_LocalPosition.x
