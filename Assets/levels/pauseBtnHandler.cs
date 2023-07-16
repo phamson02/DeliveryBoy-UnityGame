@@ -14,6 +14,7 @@ public class pauseBtnHandler : MonoBehaviour
     public GameObject taskList;
 
     public HealthBar healthBar;
+    public GameObject itemsDelivered;
     public Button deliverButton, receiveButton;
     public CountdownTimer timer;
     public void pauseGame()
@@ -23,6 +24,7 @@ public class pauseBtnHandler : MonoBehaviour
         pauseBtn.SetActive(false);
         joystick.SetActive(false);
         healthBar.gameObject.SetActive(false);
+        itemsDelivered.SetActive(false);
         deliverButton.gameObject.SetActive(false);
         receiveButton.gameObject.SetActive(false);
         timer.counting = false;
