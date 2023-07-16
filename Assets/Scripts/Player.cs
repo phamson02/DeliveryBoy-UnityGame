@@ -10,13 +10,21 @@ public class Player: MonoBehaviour
 	public Rigidbody2D rb; 
 
 	[HideInInspector]
-	public int lives=5;
+	public int maxLives=5;
+	[HideInInspector]
+	public int currentLives;
+	public HealthBar healthBar;
 
 	[SerializeField]
 	private Button receiveButton, deliverButton;
 
 	public Animator animator;
 	Vector2 movement; 
+
+	void Start(){
+		currentLives = maxLives;
+		healthBar.SetMaxHealth(maxLives);
+	}
 	
 	void Update() 
 	{
@@ -33,7 +41,12 @@ public class Player: MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D collision){
         if (collision.CompareTag("Vehicles")){
-            this.lives -= 1;
+            currentLives -= 1;
+			healthBar.SetHealth(currentLives);
+
+			if (currentLives == 0){
+				// TODO Switch to game over screen, end the game
+			}
         }
     }
 
