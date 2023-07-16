@@ -258,8 +258,10 @@ MonoBehaviour:
   maxLives: 5
   currentLives: 0
   healthBar: {fileID: 0}
+  sprite: {fileID: 7490552412330468496}
   receiveButton: {fileID: 0}
   deliverButton: {fileID: 0}
+  carryingOrder: 0
   animator: {fileID: 7490552412330468498}
 --- !u!95 &7490552412330468498
 Animator:
