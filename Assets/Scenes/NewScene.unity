@@ -54341,6 +54341,10 @@ PrefabInstance:
       propertyPath: timer
       value: 
       objectReference: {fileID: 1251607580}
+    - target: {fileID: 1094309006361927192, guid: 060c6e8de6007534f9c0d47e917e85e9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1277603304876198778, guid: 060c6e8de6007534f9c0d47e917e85e9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
