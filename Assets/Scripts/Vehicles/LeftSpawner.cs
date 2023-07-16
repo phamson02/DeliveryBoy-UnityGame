@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LeftSpawner : MonoBehaviour
+public class LeftSpawner : VehicleSpawner
 {
     [SerializeField]
     private GameObject[] vehiclesReference;
@@ -12,11 +12,6 @@ public class LeftSpawner : MonoBehaviour
 
     private GameObject spawnedVehicles;
     private int randomIndex;
-
-    [HideInInspector]
-    public int carsPerSpawn = 3;
-    [HideInInspector]
-    public float carSpeed = 5;
     // Start is called before the first frame update
     void Start()
     {
