@@ -7,7 +7,7 @@ public class gameQuitBtn : MonoBehaviour
     public GameData data;
     public void saveAndQuit()
     {
-        SaveSystem.Save(data);
+        //SaveSystem.Save(data);
         SceneManager.LoadScene(0);
     }
 }
