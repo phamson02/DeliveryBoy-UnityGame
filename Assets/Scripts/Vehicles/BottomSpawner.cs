@@ -12,6 +12,11 @@ public class BottomSpawner : MonoBehaviour
 
     private GameObject spawnedVehicles;
     private int randomIndex;
+
+    [HideInInspector]
+    public int carsPerSpawn = 3;
+    [HideInInspector]
+    public float carSpeed = 5;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,15 +26,20 @@ public class BottomSpawner : MonoBehaviour
     IEnumerator SpawnVehicles(){
         while (true){
 
-            yield return new WaitForSeconds(Random.Range(3, 5));
+            yield return new WaitForSeconds(Random.Range(7, 10));
 
-            randomIndex = Random.Range(0, vehiclesReference.Length);
+            for (int i=0; i<carsPerSpawn; i++){
+                randomIndex = Random.Range(0, vehiclesReference.Length);
 
-            spawnedVehicles = Instantiate(vehiclesReference[randomIndex]);
+                spawnedVehicles = Instantiate(vehiclesReference[randomIndex]);
 
-            spawnedVehicles.transform.position = pos.position;
-            spawnedVehicles.GetComponent<VerticalVehicle>().speed = Random.Range(4, 10);
-            spawnedVehicles.transform.localScale = new Vector3(1f, -1f, 1f);
+                spawnedVehicles.transform.position = pos.position;
+                spawnedVehicles.GetComponent<VerticalVehicle>().speed = carSpeed;
+                spawnedVehicles.GetComponent<VerticalVehicle>().direction = "bottom";
+                spawnedVehicles.transform.localScale = new Vector3(1f, -1f, 1f);
+
+                yield return new WaitForSeconds(2f);
+            }
 
         } 
     }
