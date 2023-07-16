@@ -40,8 +40,9 @@ public class GamePlayManager : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    {   
         level = PlayerPrefs.GetInt("SelectedLevel");
+        Debug.Log("LEVELDEBUGGER: " + level);
 
         // Settings for the level
 
