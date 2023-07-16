@@ -8,12 +8,16 @@ public class Player: MonoBehaviour
 	public float moveSpeed = 5f; 
 	public FixedJoystick joystick;
 	public Rigidbody2D rb; 
+	private Vector3 initialPosition;
 
 	[HideInInspector]
 	public int maxLives=5;
 	[HideInInspector]
 	public int currentLives;
 	public HealthBar healthBar;
+	public SpriteRenderer sprite;
+	private int flickerAmount=5;
+	private float flickerDuration=0.1f;
 
 	[SerializeField]
 	private Button receiveButton, deliverButton;
@@ -24,6 +28,7 @@ public class Player: MonoBehaviour
 	void Start(){
 		currentLives = maxLives;
 		healthBar.SetMaxHealth(maxLives);
+		initialPosition = transform.position;
 	}
 	
 	void Update() 
@@ -43,6 +48,8 @@ public class Player: MonoBehaviour
         if (collision.CompareTag("Vehicles")){
             currentLives -= 1;
 			healthBar.SetHealth(currentLives);
+			transform.position = initialPosition;
+			StartCoroutine(GetHitFlicker());
 
 			if (currentLives == 0){
 				// TODO Switch to game over screen, end the game
@@ -66,5 +73,14 @@ public class Player: MonoBehaviour
 	private void OnCollisionExit2D(Collision2D collision){
 		deliverButton.gameObject.SetActive(false);
 		receiveButton.gameObject.SetActive(false);
+	}
+
+	IEnumerator GetHitFlicker(){
+		for (int i=0; i<5; i++){
+			sprite.color = new Color(1f, 1f, 1f, 0.5f);
+			yield return new WaitForSeconds(flickerDuration);
+			sprite.color = Color.white;
+			yield return new WaitForSeconds(flickerDuration);
+		}
 	}
 }
