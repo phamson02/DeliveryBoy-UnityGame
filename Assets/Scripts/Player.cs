@@ -18,6 +18,7 @@ public class Player: MonoBehaviour
 	public SpriteRenderer sprite;
 	private int flickerAmount=6;
 	private float flickerDuration=0.1f;
+	private bool canBeHit = true;
 
 	[SerializeField]
 	private Button receiveButton, deliverButton;
@@ -46,14 +47,15 @@ public class Player: MonoBehaviour
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision){
-        if (collision.CompareTag("Vehicles")){
+        if (collision.CompareTag("Vehicles") && canBeHit){
             currentLives -= 1;
 			healthBar.SetHealth(currentLives);
 			transform.position = initialPosition;
 			StartCoroutine(GetHitFlicker());
 
-			if (currentLives == 0){
+			if (currentLives <= 0){
 				// TODO Switch to game over screen, end the game
+				FindObjectOfType<GamePlayManager>().gameOver();
 			}
         }
     }
@@ -77,11 +79,13 @@ public class Player: MonoBehaviour
 	}
 
 	IEnumerator GetHitFlicker(){
-		for (int i=0; i<5; i++){
+		canBeHit = false;
+		for (int i=0; i<flickerAmount; i++){
 			sprite.color = new Color(1f, 1f, 1f, 0.5f);
 			yield return new WaitForSeconds(flickerDuration);
 			sprite.color = Color.white;
 			yield return new WaitForSeconds(flickerDuration);
 		}
+		canBeHit = true;
 	}
 }

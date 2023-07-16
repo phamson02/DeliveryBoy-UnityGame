@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textDisplay: {fileID: 0}
-  secondsLeft: 5
+  secondsLeft: 15
   takingAway: 0
   counting: 0
   minutesLeft: 1
