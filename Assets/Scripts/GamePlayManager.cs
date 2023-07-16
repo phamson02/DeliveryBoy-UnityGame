@@ -75,6 +75,7 @@ public class GamePlayManager : MonoBehaviour
 
     public void receiveButtonClick(){
         carryingOrder = true;
+        recieveButton.gameObject.SetActive(false);
         shop.GetComponent<Shop>().havingOrder = false;
         updatePointer(destination);
         changeTarget(destination);
@@ -83,6 +84,7 @@ public class GamePlayManager : MonoBehaviour
     public void deliverButtonClick(){
         if (carryingOrder){
             destination.GetComponent<House>().isDesination = false;
+            deliverButton.gameObject.SetActive(false);  
             carryingOrder = false;
             inProcess = false;
             updatePointer(shop);
