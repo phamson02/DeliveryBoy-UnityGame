@@ -31,11 +31,11 @@ public class GamePlayManager : MonoBehaviour
     public VehicleSpawner[] vehicleSpawners;
     public CountdownTimer timer;
 
-
     // Start is called before the first frame update
     void Start()
-    {
+    {   
         level = PlayerPrefs.GetInt("SelectedLevel");
+        Debug.Log("LEVELDEBUGGER: " + level);
 
         // Settings for the level
 
