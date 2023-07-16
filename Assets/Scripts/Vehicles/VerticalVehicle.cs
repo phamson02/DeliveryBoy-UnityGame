@@ -11,6 +11,10 @@ public class VerticalVehicle : MonoBehaviour
 
     private Rigidbody2D myBody;
     private Vector2 frontPosition;
+    private float timeOutStop = 2f;
+    private float currentStopTime = 0f;
+    private bool isStop = false;
+    private bool avoidCollision = true;
     // Start is called before the first frame update
     void Awake()
     {
@@ -25,18 +29,39 @@ public class VerticalVehicle : MonoBehaviour
         if (direction == "top"){
             frontPosition.y -= 1.5f;
             for (int i=2; i<4; i++){
-                frontPosition.y -= 0.5f;
-                if (isObjectHere(frontPosition)){
+                frontPosition.y -= 1f;
+                if ((isObjectHere(frontPosition) && avoidCollision) || isStop){
+                    isStop = true;
                     myBody.velocity = new Vector2(myBody.velocity.x, 0);
+                    currentStopTime += Time.deltaTime/2;
+                    if (currentStopTime >= timeOutStop){
+                        avoidCollision = false;
+                        isStop = false;
+                        currentStopTime = 0;
+                    }
+                }
+                else{
+                    currentStopTime = 0;
+                    isStop = false;
                 }
             }
         }
         else if (direction == "bottom"){
             frontPosition.y += 1.5f;
             for (int i=2; i<4; i++){
-                frontPosition.y += 0.5f;
-                if (isObjectHere(frontPosition)){
+                frontPosition.y += 1f;
+                if ((isObjectHere(frontPosition) && avoidCollision) || isStop){
+                    isStop = true;
                     myBody.velocity = new Vector2(myBody.velocity.x, 0);
+                    currentStopTime += Time.deltaTime/2;
+                    if (currentStopTime >= timeOutStop){
+                        avoidCollision = false;
+                        isStop = false;
+                        currentStopTime = 0;
+                    }
+                }
+                else{
+                    currentStopTime = 0;
                 }
             }
         }
