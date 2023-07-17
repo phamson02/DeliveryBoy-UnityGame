@@ -77429,6 +77429,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1094309005042923360, guid: 060c6e8de6007534f9c0d47e917e85e9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1094309005217669970, guid: 060c6e8de6007534f9c0d47e917e85e9, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -77517,6 +77521,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1094309005226672231, guid: 060c6e8de6007534f9c0d47e917e85e9, type: 3}
+      propertyPath: m_text
+      value: Quit
+      objectReference: {fileID: 0}
     - target: {fileID: 1094309005436050341, guid: 060c6e8de6007534f9c0d47e917e85e9, type: 3}
       propertyPath: timer
       value: 
@@ -77545,6 +77553,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: f4bdc16aa549e8c4598cb2a5e8ee4ad4, type: 3}
+    - target: {fileID: 1094309005917037379, guid: 060c6e8de6007534f9c0d47e917e85e9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094309005917037379, guid: 060c6e8de6007534f9c0d47e917e85e9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1094309005965976176, guid: 060c6e8de6007534f9c0d47e917e85e9, type: 3}
       propertyPath: timer
       value: 
@@ -77569,6 +77585,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 12a84ba9c1f0fea409f617410c8336df, type: 3}
+    - target: {fileID: 1094309007036814514, guid: 060c6e8de6007534f9c0d47e917e85e9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094309007036814514, guid: 060c6e8de6007534f9c0d47e917e85e9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094309007036814514, guid: 060c6e8de6007534f9c0d47e917e85e9, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1094309007036814514, guid: 060c6e8de6007534f9c0d47e917e85e9, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
