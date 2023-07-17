@@ -18,7 +18,7 @@ public class Player: MonoBehaviour
 	public SpriteRenderer sprite;
 	private int flickerAmount=6;
 	private float flickerDuration=0.1f;
-	private bool canBeHit = true;
+	public bool canBeHit = true;
 
 	[SerializeField]
 	private Button receiveButton, deliverButton;
