@@ -10,8 +10,7 @@ public class Player: MonoBehaviour
 	public Rigidbody2D rb; 
 	private Vector3 initialPosition;
 
-	[HideInInspector]
-	public int maxLives=5;
+	public int maxLives=3;
 	[HideInInspector]
 	public int currentLives;
 	public HealthBar healthBar;
