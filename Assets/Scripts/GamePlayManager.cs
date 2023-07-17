@@ -38,8 +38,9 @@ public class GamePlayManager : MonoBehaviour
     private int numDeliveredOrders=0;
     private float remainingTime;
     private int totalMinutes, totalSeconds;
-    public GameObject deathScreen, gameCompletedSceen, scoreDisplay, taskOrdersDisplay, taskTimeDisplay;
-    private TextMeshProUGUI tmp, tmp1, tmp2;
+    public GameObject deathScreen, gameCompletedSceen, itemDeliveredCanvas,
+     scoreDisplay, taskOrdersDisplay, taskTimeDisplay, deliveredOredersDisplay;
+    private TextMeshProUGUI tmp, tmp1, tmp2, tmp3;
 
     // Start is called before the first frame update
     void Start()
@@ -164,10 +165,8 @@ public class GamePlayManager : MonoBehaviour
             changeTarget(shop);
 
             numDeliveredOrders += 1;
-            Debug.Log("numDeliverOrders updated to " + numDeliveredOrders);
-            Debug.Log("useTime is " + useTime);
-            Debug.Log("check condition: " + numDeliveredOrders + " " + numTotalOrders);
-            Debug.Log("check condition: " + (numDeliveredOrders == numTotalOrders));
+            tmp3 = deliveredOredersDisplay.GetComponent<TextMeshProUGUI>();
+            tmp3.text = numDeliveredOrders.ToString();
             if (useTime && (numDeliveredOrders == numTotalOrders)){
                 gameCompleted();
             }
@@ -203,12 +202,15 @@ public class GamePlayManager : MonoBehaviour
         }
     }
     public void gameOver(){
+
+        itemDeliveredCanvas.SetActive(false);
         deathScreen.SetActive(true);
     }
 
     public void gameCompleted(){
         tmp = scoreDisplay.GetComponent<TextMeshProUGUI>();
         tmp.text = "YOU EARNED " + calculateScore().ToString();
+        itemDeliveredCanvas.SetActive(false);
 
         gameCompletedSceen.SetActive(true);
     }
