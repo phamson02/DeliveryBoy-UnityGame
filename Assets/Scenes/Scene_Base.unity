@@ -63311,6 +63311,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4188525021749190625, guid: c9196fdbe25e2a7408dc34f2d6b04df3, type: 3}
+      propertyPath: m_margin.z
+      value: 100.78144
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9196fdbe25e2a7408dc34f2d6b04df3, type: 3}
 --- !u!1 &1071075082 stripped
@@ -65687,6 +65691,107 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1291173733
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3625385943817433345, guid: 361fed4a55a674c458c6ee1a65577396, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3625385943817433345, guid: 361fed4a55a674c458c6ee1a65577396, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -30.538485
+      objectReference: {fileID: 0}
+    - target: {fileID: 3625385943817433345, guid: 361fed4a55a674c458c6ee1a65577396, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.32603335
+      objectReference: {fileID: 0}
+    - target: {fileID: 3625385943817433345, guid: 361fed4a55a674c458c6ee1a65577396, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.057680935
+      objectReference: {fileID: 0}
+    - target: {fileID: 3625385943817433345, guid: 361fed4a55a674c458c6ee1a65577396, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3625385943817433345, guid: 361fed4a55a674c458c6ee1a65577396, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3625385943817433345, guid: 361fed4a55a674c458c6ee1a65577396, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3625385943817433345, guid: 361fed4a55a674c458c6ee1a65577396, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3625385943817433345, guid: 361fed4a55a674c458c6ee1a65577396, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3625385943817433345, guid: 361fed4a55a674c458c6ee1a65577396, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3625385943817433345, guid: 361fed4a55a674c458c6ee1a65577396, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5268995053531382963, guid: 361fed4a55a674c458c6ee1a65577396, type: 3}
+      propertyPath: powerUps.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5268995053531382963, guid: 361fed4a55a674c458c6ee1a65577396, type: 3}
+      propertyPath: positions.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5268995053531382963, guid: 361fed4a55a674c458c6ee1a65577396, type: 3}
+      propertyPath: powerUps.Array.data[0]
+      value: 
+      objectReference: {fileID: 1416868797460031679, guid: 02580516e9f35534da0b8bff9a99e08a, type: 3}
+    - target: {fileID: 5268995053531382963, guid: 361fed4a55a674c458c6ee1a65577396, type: 3}
+      propertyPath: powerUps.Array.data[1]
+      value: 
+      objectReference: {fileID: 4860373475820358747, guid: 5ea2a1e73a411074b8643ddb6dadb741, type: 3}
+    - target: {fileID: 5268995053531382963, guid: 361fed4a55a674c458c6ee1a65577396, type: 3}
+      propertyPath: positions.Array.data[0]
+      value: 
+      objectReference: {fileID: 859412247}
+    - target: {fileID: 5268995053531382963, guid: 361fed4a55a674c458c6ee1a65577396, type: 3}
+      propertyPath: positions.Array.data[1]
+      value: 
+      objectReference: {fileID: 1145125934}
+    - target: {fileID: 5268995053531382963, guid: 361fed4a55a674c458c6ee1a65577396, type: 3}
+      propertyPath: positions.Array.data[2]
+      value: 
+      objectReference: {fileID: 2107480610}
+    - target: {fileID: 5268995053531382963, guid: 361fed4a55a674c458c6ee1a65577396, type: 3}
+      propertyPath: positions.Array.data[3]
+      value: 
+      objectReference: {fileID: 603282095}
+    - target: {fileID: 5268995053531382963, guid: 361fed4a55a674c458c6ee1a65577396, type: 3}
+      propertyPath: positions.Array.data[4]
+      value: 
+      objectReference: {fileID: 1257412762}
+    - target: {fileID: 5268995053531382963, guid: 361fed4a55a674c458c6ee1a65577396, type: 3}
+      propertyPath: positions.Array.data[5]
+      value: 
+      objectReference: {fileID: 1282725121}
+    - target: {fileID: 5268995053531382963, guid: 361fed4a55a674c458c6ee1a65577396, type: 3}
+      propertyPath: positions.Array.data[6]
+      value: 
+      objectReference: {fileID: 754722346}
+    - target: {fileID: 6555870140714210955, guid: 361fed4a55a674c458c6ee1a65577396, type: 3}
+      propertyPath: m_Name
+      value: PowerUpGenerator
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 361fed4a55a674c458c6ee1a65577396, type: 3}
 --- !u!1 &1296198794
 GameObject:
   m_ObjectHideFlags: 0
@@ -70997,6 +71102,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1790773646 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4188525021749190627, guid: c9196fdbe25e2a7408dc34f2d6b04df3, type: 3}
+  m_PrefabInstance: {fileID: 1071075081}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1796570183
 GameObject:
   m_ObjectHideFlags: 0
@@ -71774,9 +71884,11 @@ MonoBehaviour:
   timer: {fileID: 2130694547}
   deathScreen: {fileID: 779968135}
   gameCompletedSceen: {fileID: 597387649}
+  itemDeliveredCanvas: {fileID: 1071075082}
   scoreDisplay: {fileID: 1918825227}
   taskOrdersDisplay: {fileID: 1094309005469658866}
   taskTimeDisplay: {fileID: 1094309005469658865}
+  deliveredOredersDisplay: {fileID: 1790773646}
 --- !u!114 &1856933013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72315,7 +72427,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1920601871
 Transform:
   m_ObjectHideFlags: 0
