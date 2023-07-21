@@ -55,7 +55,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1239925156}
-  - component: {fileID: 3570973546089513076}
+  - component: {fileID: 1553628896875251938}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
@@ -78,7 +78,7 @@ Transform:
   m_Father: {fileID: 385442550}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!212 &3570973546089513076
+--- !u!212 &1553628896875251938
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,12 +119,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7482667652216324306, guid: bafc3e58d2a96504ab852aea5c096f0f, type: 3}
-  m_Color: {r: 0, g: 1, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 0bd06ece27615f1448018fb0d18dc4a5, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.86, y: 1.76}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -255,6 +255,13 @@ MonoBehaviour:
   moveSpeed: 5
   joystick: {fileID: 0}
   rb: {fileID: 7490552412330468511}
+  maxLives: 5
+  currentLives: 0
+  healthBar: {fileID: 0}
+  sprite: {fileID: 7490552412330468496}
+  receiveButton: {fileID: 0}
+  deliverButton: {fileID: 0}
+  carryingOrder: 0
   animator: {fileID: 7490552412330468498}
 --- !u!95 &7490552412330468498
 Animator:

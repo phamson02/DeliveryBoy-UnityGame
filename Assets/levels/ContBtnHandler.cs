@@ -8,12 +8,18 @@ public class ContBtnHandler : MonoBehaviour
     public GameObject pauseBtn;
 
     public GameObject joystick;
-    public GameObject taskList;
+    // public GameObject taskList;
+    public HealthBar healthBar;
+    public GameObject itemDelivered;
+    public CountdownTimer timer;
     public void Continue()
     {
         pauseMenu.SetActive(false);
-        taskList.SetActive(true);
+        // taskList.SetActive(true);
         pauseBtn.SetActive(true);
         joystick.SetActive(true);
+        healthBar.gameObject.SetActive(true);
+        itemDelivered.SetActive(true);
+        timer.counting = true;
     }
 }

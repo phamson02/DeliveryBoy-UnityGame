@@ -8,15 +8,29 @@ public class Player: MonoBehaviour
 	public float moveSpeed = 5f; 
 	public FixedJoystick joystick;
 	public Rigidbody2D rb; 
+	private Vector3 initialPosition;
 
+	public int maxLives=3;
 	[HideInInspector]
-	public int lives=5;
+	public int currentLives;
+	public HealthBar healthBar;
+	public SpriteRenderer sprite;
+	private int flickerAmount=6;
+	private float flickerDuration=0.1f;
+	public bool canBeHit = true;
 
 	[SerializeField]
 	private Button receiveButton, deliverButton;
+	public bool carryingOrder = false;
 
 	public Animator animator;
 	Vector2 movement; 
+
+	void Start(){
+		currentLives = maxLives;
+		healthBar.SetMaxHealth(maxLives);
+		initialPosition = transform.position;
+	}
 	
 	void Update() 
 	{
@@ -32,8 +46,16 @@ public class Player: MonoBehaviour
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision){
-        if (collision.CompareTag("Vehicles")){
-            this.lives -= 1;
+        if (collision.CompareTag("Vehicles") && canBeHit){
+            currentLives -= 1;
+			healthBar.SetHealth(currentLives);
+			transform.position = initialPosition;
+			StartCoroutine(GetHitFlicker());
+
+			if (currentLives <= 0){
+				// TODO Switch to game over screen, end the game
+				FindObjectOfType<GamePlayManager>().gameOver();
+			}
         }
     }
 
@@ -43,8 +65,8 @@ public class Player: MonoBehaviour
 				receiveButton.gameObject.SetActive(true);
 			}
 		}
-		else if (collision.gameObject.CompareTag("House")){
-			if (collision.gameObject.GetComponent<House>().isDesination){
+		else if (collision.gameObject.CompareTag("House") && carryingOrder){
+			if (collision.gameObject.GetComponent<House>().isDesination && carryingOrder){
 				deliverButton.gameObject.SetActive(true);
 			}
 		}
@@ -53,5 +75,16 @@ public class Player: MonoBehaviour
 	private void OnCollisionExit2D(Collision2D collision){
 		deliverButton.gameObject.SetActive(false);
 		receiveButton.gameObject.SetActive(false);
+	}
+
+	IEnumerator GetHitFlicker(){
+		canBeHit = false;
+		for (int i=0; i<flickerAmount; i++){
+			sprite.color = new Color(1f, 1f, 1f, 0.5f);
+			yield return new WaitForSeconds(flickerDuration);
+			sprite.color = Color.white;
+			yield return new WaitForSeconds(flickerDuration);
+		}
+		canBeHit = true;
 	}
 }
