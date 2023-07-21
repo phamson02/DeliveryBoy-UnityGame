@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TopSpawner : MonoBehaviour
+public class TopSpawner : VehicleSpawner
 {
     [SerializeField]
     private GameObject[] vehiclesReference;
@@ -12,6 +12,7 @@ public class TopSpawner : MonoBehaviour
 
     private GameObject spawnedVehicles;
     private int randomIndex;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,15 +22,19 @@ public class TopSpawner : MonoBehaviour
     IEnumerator SpawnVehicles(){
         while (true){
 
-            yield return new WaitForSeconds(Random.Range(3, 5));
+            yield return new WaitForSeconds(Random.Range(7, 10));
 
-            randomIndex = Random.Range(0, vehiclesReference.Length);
+            for (int i=0; i<carsPerSpawn; i++){
+                randomIndex = Random.Range(0, vehiclesReference.Length);
 
-            spawnedVehicles = Instantiate(vehiclesReference[randomIndex]);
+                spawnedVehicles = Instantiate(vehiclesReference[randomIndex]);
 
-            spawnedVehicles.transform.position = pos.position;
-            spawnedVehicles.GetComponent<VerticalVehicle>().speed = -Random.Range(4, 10);
+                spawnedVehicles.transform.position = pos.position;
+                spawnedVehicles.GetComponent<VerticalVehicle>().speed = -carSpeed;
 
+                yield return new WaitForSeconds(2f);
+            }
+        
         } 
     }
 }
